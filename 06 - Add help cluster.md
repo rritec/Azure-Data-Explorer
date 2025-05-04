@@ -7,3 +7,14 @@
 - Observe all sample data
 
 ![image](https://github.com/user-attachments/assets/75984dc6-d4de-4076-9f92-406e30cbb928)
+
+- Query sample data
+
+``` kql
+StormEvents
+| take 10
+```
+
+![image](https://github.com/user-attachments/assets/e88d10d0-2f9c-427c-9851-43d0b6730a21)
+
+- 
