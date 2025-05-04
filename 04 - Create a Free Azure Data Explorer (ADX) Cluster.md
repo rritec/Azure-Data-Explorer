@@ -19,36 +19,10 @@ Visit: [https://dataexplorer.azure.com/freecluster](https://dataexplorer.azure.c
 Sign in using your **Microsoft Account** (personal or work email).
 
 ### 3. **Create Cluster**
-Click **"Create Free Cluster"** to launch a temporary ADX cluster.
+- Click on **My Cluster** > Click on **Create Cluster and Database**
+- Provide Cluster name, Database Name and select region
 
-- It takes a few seconds to set up.
-- The cluster and default database are created automatically.
+![image](https://github.com/user-attachments/assets/c989a3e3-6c18-4db7-a71c-d63496cc1802)
 
-### 4. **Start Querying**
-You’ll be redirected to the **Kusto Web UI** where you can:
 
-- Run KQL queries
-- Explore sample tables like:
-  - `StormEvents`
-  - `SampleLogs`
-  - `Traces`
-- Use the built-in database (usually named `Samples`)
 
----
-
-## ⚠️ Cluster Limitations
-
-| Feature              | Details                                           |
-|----------------------|---------------------------------------------------|
-| Duration             | 🕐 Valid for **1 hour**, then auto-deleted        |
-| Subscription         | ❌ No Azure subscription required                  |
-| Custom Data          | ⚠️ Cannot ingest external data in this free mode |
-| Use Case             | ✅ Ideal for learning, testing, and demos only    |
-
----
-
-## 📌 Next Steps
-
-Would you like to:
-- ✅ Run sample KQL queries?
-- 📥 Ingest your own data into a full Azure subscription-based ADX cluster?
