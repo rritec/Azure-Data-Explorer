@@ -1,9 +1,3 @@
-# Azure Data Explorer (ADX) Learning Series
-
-This repository provides chapter-wise notes with hands-on exercises for learning Azure Data Explorer (ADX), based on a YouTube playlist.
-
----
-
 ## 📘 Chapter 1: Introduction to Azure Data Explorer (ADX)
 
 ### 🎯 Objective
