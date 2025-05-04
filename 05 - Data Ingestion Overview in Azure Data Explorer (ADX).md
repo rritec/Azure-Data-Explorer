@@ -43,3 +43,8 @@ ADX supports ingestion from various formats:
 5. browse and select emp.csv
 6. Click on Next
 7. Click on Finish > Click on Close
+
+Exercise : Similarly load dept.csv file
+
+![image](https://github.com/user-attachments/assets/15646e89-52ae-41f4-9483-b0f19c006aaa)
+
