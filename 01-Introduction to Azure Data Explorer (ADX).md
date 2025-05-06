@@ -26,25 +26,3 @@ Understand what Azure Data Explorer is, its use cases, and how it fits into the 
 
   * Azure Monitor, Log Analytics, Power BI, Azure Synapse, and more
 
-### 🧪 Hands-On Exercise
-
-> 🛠️ **Goal:** Explore the Azure Portal and locate Azure Data Explorer service.
-
-**Steps:**
-
-1. Go to [Azure Portal](https://portal.azure.com).
-2. In the search bar, type **Azure Data Explorer** and click the service.
-3. Familiarize yourself with the overview and UI.
-4. Check the official documentation [here](https://learn.microsoft.com/en-us/azure/data-explorer/).
-
-### ✅ Outcomes
-
-* Understand what ADX is and where it is used.
-* Navigated the Azure Portal to locate ADX.
-* Identified integration points with other Azure services.
-
----
-
-## 📘 Chapter 2: Azure Data Explorer (ADX) Architecture & Workflow
-
-*Coming up next...*
