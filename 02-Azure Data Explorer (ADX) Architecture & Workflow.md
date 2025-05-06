@@ -33,24 +33,4 @@ Understand the architectural components of Azure Data Explorer and how data flow
   * **Data Management Engine** – handles ingestion
   * **Query Engine** – handles queries and optimizations
 
-### 🧪 Hands-On Exercise
-
-> 🛠️ **Goal:** Understand how data flows through Azure Data Explorer.
-
-**Steps:**
-
 1. Visit the [ADX Architecture Documentation](https://learn.microsoft.com/en-us/azure/data-explorer/data-explorer-overview).
-2. Study the diagram and note the stages: Ingestion → Storage → Query → Visualization.
-3. Draw a simplified version of the architecture in your notebook or using a tool like Lucidchart or draw\.io.
-
-### ✅ Outcomes
-
-* Learned about the structure of ADX (clusters, databases, tables).
-* Understood the flow of data and core components.
-* Identified ingestion sources and engine roles in ADX.
-
----
-
-## 📘 Chapter 3: Provision Azure Data Explorer (ADX) Cluster and Database
-
-*Coming up next...*
