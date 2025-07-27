@@ -8,6 +8,8 @@ KQL is a powerful query language for Azure Data Explorer (ADX) used to explore l
 - install Kusto Explorer is a desktop tool for running KQL queries https://learn.microsoft.com/en-us/kusto/tools/kusto-explorer?view=microsoft-fabric
 - Alternatively, use https://dataexplorer.azure.com/freecluster.
 
+## Create Free Cluster
+1. Click on https://dataexplorer.azure.com/freecluster > my clusters > create free cluster
 ## Create table
 ```kql
 .create table Logs(Level:string ,Text:string);
