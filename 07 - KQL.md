@@ -8,6 +8,39 @@ KQL is a powerful query language for Azure Data Explorer (ADX) used to explore l
 - install Kusto Explorer is a desktop tool for running KQL queries https://learn.microsoft.com/en-us/kusto/tools/kusto-explorer?view=microsoft-fabric
 - Alternatively, use https://dataexplorer.azure.com/freecluster.
 
+## Create table
+```kql
+.create table Logs(Level:string ,Text:string);
+
+.show tables ;
+
+.ingest inline into table Logs <|
+"INFO", "System initialized successfully"
+"WARN", "Disk usage is reaching 85%"
+"ERROR", "Failed to connect to database"
+"INFO", "User logged in"
+"DEBUG", "Fetching user preferences"
+"INFO", "Cache refresh completed"
+"WARN", "Low memory warning triggered"
+"INFO", "Scheduled task executed"
+"ERROR", "Timeout occurred while fetching data"
+"INFO", "Health check passed"
+"DEBUG", "Session token generated"
+"WARN", "Unusual network latency detected"
+"INFO", "Service restarted after crash"
+"ERROR", "Authentication failed for user"
+"INFO", "New configuration deployed"
+"DEBUG", "Retry logic engaged on API call"
+"WARN", "Unexpected payload format"
+"INFO", "Backup completed successfully"
+"ERROR", "Disk write operation failed"
+"INFO", "User logged out";
+
+Logs
+| take 6;
+
+```
+
 ## 💬 3. Add a Comment in KQL
 ```kql
 // This is a single-line comment
