@@ -8,9 +8,9 @@ KQL is a powerful query language for Azure Data Explorer (ADX) used to explore l
 - install Kusto Explorer is a desktop tool for running KQL queries https://learn.microsoft.com/en-us/kusto/tools/kusto-explorer?view=microsoft-fabric
 - Alternatively, use https://dataexplorer.azure.com/freecluster.
 
-## Create Free Cluster
+## 3. Create Free Cluster
 1. Click on https://dataexplorer.azure.com/freecluster > my clusters > create free cluster
-## Create table
+## 4. Create table
 ```kql
 .create table Logs(Level:string ,Text:string);
 
@@ -43,28 +43,28 @@ Logs
 
 ```
 
-## Add help cluster
+## 5. Add help cluster
 
 [06 - Add help cluster](https://github.com/rritec/Azure-Data-Explorer/blob/main/06%20-%20Add%20help%20cluster.md)
-## 💬 3. Add a Comment in KQL
+## 💬 6. Add a Comment in KQL
 ```kql
 // This is a single-line comment
 ```
 
-## 📛 4. Count rows
+## 📛 7. Count rows
 ```kql
 StormEvents 
 | count
 
 ```
 
-## 📥 5. See a sample of data
+## 📥 8. See a sample of data
 ```kql
 StormEvents 
 | take 5
 ```
 
-## 📦 6. Select a subset of columns
+## 📦 9. Select a subset of columns
 
 ```kql
 StormEvents
@@ -72,14 +72,14 @@ StormEvents
 | project State, EventType, DamageProperty
 ```
 
-## 📦 6. List unique values
+## 📦 10. List unique values
 
 ```kql
 StormEvents 
 | distinct EventType
 ```
 
-## 📦 6. Sort results
+## 📦 11. Sort results
 
 ```kql
 StormEvents
@@ -87,14 +87,14 @@ StormEvents
 | sort by DamageProperty
 | project StartTime, EndTime, State, EventType, DamageProperty
 ```
-## 📦 6. Filter by condition
+## 📦 12. Filter by condition
 
 ```kql
 StormEvents
 | where State == 'TEXAS' and EventType == 'Flood'
 | project StartTime, EndTime, State, EventType, DamageProperty
 ```
-## 📦 6.Filter by date and time range
+## 📦 13.Filter by date and time range
 
 ```kql
 StormEvents
@@ -102,7 +102,7 @@ StormEvents
 | project State, EventType, StartTime, EndTime
 | sort by StartTime asc
 ```
-## 📦 6. Get the top n rows
+## 📦 14. Get the top n rows
 
 ```kql
 StormEvents
@@ -110,7 +110,7 @@ StormEvents
 | top 5 by DamageProperty
 | project StartTime, EndTime, State, EventType, DamageProperty
 ```
-## 📦 6. Create calculated columns
+## 📦 15. Create calculated columns
 
 ```kql
 StormEvents
@@ -124,7 +124,7 @@ StormEvents
 | top 5 by DamageProperty desc
 | extend Duration = EndTime - StartTime
 ```
-## 📦 6. Map values from one set to another
+## 📦 16. Map values from one set to another
 
 ```kql
 let sourceMapping = dynamic(
