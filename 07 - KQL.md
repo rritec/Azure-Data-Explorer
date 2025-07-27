@@ -51,27 +51,92 @@ Logs
 // This is a single-line comment
 ```
 
-## 📛 4. Alias Statement in KQL
+## 📛 4. Count rows
 ```kql
-emp 
-| take 10
-| as employee 
+StormEvents 
+| count
 
 ```
 
-## 📥 5. Query Parameters Declaration Statement in KQL
+## 📥 5. See a sample of data
 ```kql
-let min_salary = 2000;
-emp
-| where sal > min_salary
+StormEvents 
+| take 5
 ```
 
-## 📦 6. Batches in KQL
-Run multiple queries together:
+## 📦 6. Select a subset of columns
+
 ```kql
-emp | count;
-dept | count
+StormEvents
+| take 5
+| project State, EventType, DamageProperty
 ```
+
+## 📦 6. List unique values
+
+```kql
+StormEvents 
+| distinct EventType
+```
+
+## 📦 6. Sort results
+
+```kql
+StormEvents
+| where State == 'TEXAS' and EventType == 'Flood'
+| sort by DamageProperty
+| project StartTime, EndTime, State, EventType, DamageProperty
+```
+## 📦 6. Filter by condition
+
+```kql
+StormEvents
+| where State == 'TEXAS' and EventType == 'Flood'
+| project StartTime, EndTime, State, EventType, DamageProperty
+```
+## 📦 6.Filter by date and time range
+
+```kql
+StormEvents
+| where StartTime between (datetime(2007-08-01 00:00:00) .. datetime(2007-08-30 23:59:59))
+| project State, EventType, StartTime, EndTime
+| sort by StartTime asc
+```
+## 📦 6. Get the top n rows
+
+```kql
+StormEvents
+| where State == 'TEXAS' and EventType == 'Flood'
+| top 5 by DamageProperty
+| project StartTime, EndTime, State, EventType, DamageProperty
+```
+## 📦 6. Create calculated columns
+
+```kql
+StormEvents
+| where State == 'TEXAS' and EventType == 'Flood'
+| top 5 by DamageProperty desc
+| project StartTime, EndTime, Duration = EndTime - StartTime, DamageProperty
+```
+```kql
+StormEvents
+| where State == 'TEXAS' and EventType == 'Flood'
+| top 5 by DamageProperty desc
+| extend Duration = EndTime - StartTime
+```
+## 📦 6. Map values from one set to another
+
+```kql
+let sourceMapping = dynamic(
+  {
+    "Emergency Manager" : "Public",
+    "Utility Company" : "Private"
+  });
+StormEvents
+| where Source == "Emergency Manager" or Source == "Utility Company"
+| project EventId, Source, FriendlyName = sourceMapping[Source]
+```
+
 
 ## 🧱 7. `datatable()` Operator in KQL
 ```kql
