@@ -197,6 +197,9 @@ emp | limit 5
 ```kql
 emp | top 3 by sal desc
 ```
+```kql
+Emp | sort by sal asc | take 3
+```
 
 ## ➕ 18. `extend` Operator
 ```kql
