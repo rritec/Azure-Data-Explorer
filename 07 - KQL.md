@@ -261,6 +261,8 @@ emp
 ```
 ## Explain
 
+1. If you're familiar with SQL and want to learn KQL, translate SQL queries into KQL by prefacing the SQL query with a comment line, --, and the keyword explain. The output shows the KQL version of the query, which can help you understand the KQL syntax and concepts.
+
 ```kql
 explain
 select dname,sum(sal) as total_sal from emp inner join dept on emp.deptno=dept.deptno group by dname
