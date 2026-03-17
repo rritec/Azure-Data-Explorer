@@ -1,10 +1,10 @@
-## 🔹 What is Data Ingestion?
+# 🔹 What is Data Ingestion?
 
 **Data Ingestion** is the process of **loading data into ADX** tables so it can be queried using **KQL (Kusto Query Language)**.
 
 ---
 
-## ✅ Supported Data Formats
+✅ Supported Data Formats
 
 ADX supports ingestion from various formats:
 
@@ -20,7 +20,7 @@ ADX supports ingestion from various formats:
 
 ---
 
-## Load data from blob
+## Exercise 1: Load data from blob
 
 1. Click on Mycluster > Click on Ingest
 2. Click on Azure Storage
@@ -34,7 +34,7 @@ ADX supports ingestion from various formats:
 
 8. Click on Finish > Click on Close
 
-## Load data from Local System file emp.csv
+## Exercise 2: Load data from Local System file emp.csv
 
 1. Click on Mycluster > Click on Ingest
 2. Click on Local File
