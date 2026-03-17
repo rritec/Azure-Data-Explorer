@@ -46,6 +46,8 @@ Logs
 ## 5. Add help cluster
 
 [06 - Add help cluster](https://github.com/rritec/Azure-Data-Explorer/blob/main/06%20-%20Add%20help%20cluster.md)
+
+
 ## 💬 6. Add a Comment in KQL
 ```kql
 // This is a single-line comment
