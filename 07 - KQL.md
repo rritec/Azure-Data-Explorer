@@ -138,62 +138,62 @@ StormEvents
 ```
 
 
-## 🧱 7. `datatable()` Operator in KQL
+## 🧱 17. `datatable()` Operator in KQL
 ```kql
 let demo = datatable(id:int, name:string)[1, "Alice", 2, "Bob"];
 demo
 ```
 
-## 🔢 8. `count()` & `distinct()` Operators
+## 🔢 18. `count()` & `distinct()` Operators
 ```kql
 emp | count;
 emp | distinct job
 ```
 
-## 🔍 9. `project` Operator
+## 🔍 19. `project` Operator
 ```kql
 emp | project empno, ename, sal;
 ```
 
-## ✂️ 10. `project-away` & `project-keep`
+## ✂️ 20. `project-away` & `project-keep`
 ```kql
 emp | project-away comm, mgr;
 emp | project-keep empno, job
 ```
 
-## 🔄 11. `project-rename` & `project-reorder`
+## 🔄 21. `project-rename` & `project-reorder`
 ```kql
 emp | project-rename EmployeeName = ename;
 emp | project-reorder empno, deptno, ename;
 ```
 
-## 🧬 12. `getschema` Operator
+## 🧬 22. `getschema` Operator
 ```kql
 emp | getschema;
 ```
 
-## 🖨️ 13. `print` Operator
+## 🖨️ 23. `print` Operator
 ```kql
 print now = now(), version = "KQL";
 ```
 
-## ➗ 14. `range` Operator
+## ➗ 24. `range` Operator
 ```kql
 range x from 1 to 10 step 2;
 ```
 
-## 🔍 15. `where` & `filter` Operators
+## 🔍 25. `where` & `filter` Operators
 ```kql
 emp | where job == "CLERK";
 ```
 
-## 🎯 16. `take` & `limit` Operators
+## 🎯 26. `take` & `limit` Operators
 ```kql
 emp | take 5;
 emp | limit 5
 ```
 
-## 🏆 17. `top` Operator
+## 🏆 27. `top` Operator
 ```kql
 emp | top 3 by sal desc
 ```
@@ -201,12 +201,12 @@ emp | top 3 by sal desc
 Emp | sort by sal asc | take 3
 ```
 
-## ➕ 18. `extend` Operator
+## ➕ 28. `extend` Operator
 ```kql
 emp | extend annual_salary = sal * 12
 ```
 
-## 📊 19. `union` Operator
+## 📊 29. `union` Operator
 ```kql
 let by_dept = emp
 | summarize count() by deptno;
@@ -221,7 +221,7 @@ union
 ```
 
 
-## 🎲 20. `sample` Operator
+## 🎲 30. `sample` Operator
 ```kql
 emp | sample 3
 ```
