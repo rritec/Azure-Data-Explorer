@@ -1,4 +1,4 @@
-## 📘 Chapter 1: Introduction to Azure Data Explorer (ADX)
+## 📘 Chapter 1: Introduction to Azure Data eXplorer (ADX)
 
 ### 🎯 Objective
 
